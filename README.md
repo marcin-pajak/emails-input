@@ -34,7 +34,6 @@ You can also use the provided styles:
 
 ```
 import '@marcin-pajak/emails-input/lib/styles.css';
-
 ```
 
 ### UMD version
@@ -166,13 +165,12 @@ property. The library inherits them in its styles.
   instance.init();
 
   // Show current emails
-  console.log(instance.emails)
+  console.log(instance.emails);
 
   // Get valid emails
-  const validEmails =>
-    instance.entries
-        .filter(entry => Boolean(entry.isValid))
-        .map(entry => entry.email)
+  const validEmails = instance.entries
+    .filter((entry) => Boolean(entry.isValid))
+    .map((entry) => entry.email);
 </script>
 ```
 
@@ -321,7 +319,7 @@ When called with invalid index, it throws `ERR_EMAIL_NOT_FOUND`.
 List of error codes, that should be handled:
 
 ```typescript
-export enum ErrorCodes {
+enum ErrorCodes {
   ERR_INVALID_INITIAL_VALUES,
   ERR_INVALID_ON_CHANGE_CALLBACK,
   ERR_EMAIL_NOT_FOUND,
