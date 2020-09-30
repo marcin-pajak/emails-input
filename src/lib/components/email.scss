@@ -1,0 +1,50 @@
+.Email {
+  box-sizing: border-box;
+  color: #050038;
+  display: flex;
+  font-size: 14px;
+  min-height: 24px;
+  line-height: 24px;
+  margin: 4px;
+  min-width: 0;
+  user-select: none;
+}
+
+.Email--valid {
+  border-radius: 100px;
+  background: rgba(102, 153, 255, 0.2);
+  border: 1px solid rgba(102, 153, 255, 0.2);
+  padding-left: 10px;
+}
+
+.Email--invalid {
+  border: #fff;
+  border-bottom: 1px dashed #d92929;
+}
+
+.Email-remove {
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 21px;
+  margin: 2px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.Email-remove:focus,
+.Email-remove:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.Email-remove:active {
+  transform: translate(1px, 1px);
+}

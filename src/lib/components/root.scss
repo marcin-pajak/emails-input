@@ -1,0 +1,27 @@
+.EmailsInput {
+  align-content: flex-start;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #c3c2cf;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
+  height: inherit;
+  max-height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 2px;
+  word-break: break-word;
+  width: 100%;
+}
+
+@supports (-moz-appearance: none) {
+  .EmailsInput::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+  }
+}

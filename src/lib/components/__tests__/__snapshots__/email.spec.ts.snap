@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`email template should return sanitized template 1`] = `
+"
+<div class=\\"EmailsInput-email Email Email--valid\\" data-id=\\"1\\">
+  <span class=\\"Email-text\\">
+    &lt;b>dangerous&lt;/b>@email.com
+  </span>
+  <button aria-label=\\"remove email\\" class=\\"Email-remove\\" data-id=\\"1\\" type=\\"button\\">
+    &times;
+  </button>
+</div>"
+`;
+
+exports[`email template should return template for invalid email 1`] = `
+"
+<div class=\\"EmailsInput-email Email Email--invalid\\" data-id=\\"1\\">
+  <span class=\\"Email-text\\">
+    invalid
+  </span>
+  <button aria-label=\\"remove email\\" class=\\"Email-remove\\" data-id=\\"1\\" type=\\"button\\">
+    &times;
+  </button>
+</div>"
+`;
+
+exports[`email template should return template for valid email 1`] = `
+"
+<div class=\\"EmailsInput-email Email Email--valid\\" data-id=\\"1\\">
+  <span class=\\"Email-text\\">
+    valid@email.com
+  </span>
+  <button aria-label=\\"remove email\\" class=\\"Email-remove\\" data-id=\\"1\\" type=\\"button\\">
+    &times;
+  </button>
+</div>"
+`;

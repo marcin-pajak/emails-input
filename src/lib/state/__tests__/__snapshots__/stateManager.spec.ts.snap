@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stateManager handleAction should handle adding email 1`] = `
+Object {
+  "emails": Array [
+    "new@email.com",
+  ],
+  "entries": Array [
+    Object {
+      "email": "new@email.com",
+      "isValid": true,
+    },
+  ],
+  "entryMap": Object {
+    "1": Object {
+      "email": "new@email.com",
+      "isValid": true,
+    },
+  },
+  "mapper": Object {
+    "new@email.com": "1",
+  },
+  "state": "Initializing",
+}
+`;
+
+exports[`stateManager handleAction should handle removing email 1`] = `
+Object {
+  "emails": Array [],
+  "entries": Array [],
+  "entryMap": Object {},
+  "mapper": Object {},
+  "state": "Initializing",
+}
+`;
+
+exports[`stateManager handleAction should handle updating library state 1`] = `
+Object {
+  "emails": Array [],
+  "entries": Array [],
+  "entryMap": Object {},
+  "mapper": Object {},
+  "state": "Destroyed",
+}
+`;
+
+exports[`stateManager handleAction should handle wrong action 1`] = `
+Object {
+  "emails": Array [],
+  "entries": Array [],
+  "entryMap": Object {},
+  "mapper": Object {},
+  "state": "Initializing",
+}
+`;
+
+exports[`stateManager makeState should return initial state 1`] = `
+Object {
+  "emails": Array [],
+  "entries": Array [],
+  "entryMap": Object {},
+  "mapper": Object {},
+  "state": "Initializing",
+}
+`;
+
+exports[`stateManager makeState should return initial state with custom value 1`] = `
+Object {
+  "emails": Array [
+    "good@email.com",
+  ],
+  "entries": Array [
+    Object {
+      "email": "good@email.com",
+      "isValid": true,
+    },
+  ],
+  "entryMap": Object {
+    "1": Object {
+      "email": "good@email.com",
+      "isValid": true,
+    },
+  },
+  "mapper": Object {
+    "good@email.com": "1",
+  },
+  "state": "Initializing",
+}
+`;

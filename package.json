@@ -83,5 +83,5 @@
     "test:changed": "jest --changedSince=origin/master",
     "types": "tsc --outDir '/tmp/tsc-void' # https://github.com/Microsoft/TypeScript/issues/30661"
   },
-  "version": "0.0.0"
+  "version": "0.1.0"
 }

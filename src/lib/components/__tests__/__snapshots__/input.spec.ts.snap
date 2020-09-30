@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input template should return valid template 1`] = `
+"<input
+    aria-label=\\"add more people\\"
+    class=\\"EmailsInput-input\\"
+    max-length=\\"255\\"
+    placeholder=\\"add more people...\\"
+  />"
+`;
