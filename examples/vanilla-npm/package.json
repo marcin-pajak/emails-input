@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "npm run clean && parcel build index.html",
+    "build": "npm run clean && parcel build index.html --public-url /emails-input/examples/vanilla-npm/dist/",
     "clean": "rm -rf dist"
   },
   "dependencies": {
