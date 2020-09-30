@@ -186,6 +186,8 @@ Have a look at the examples directory.
 
 See [Vanilla Example](./examples/vanilla-npm/dist/index.html)
 
+See [Multiple Instances](./examples/vanilla-multiple/index.html)
+
 ## Public API
 
 ### Callbacks
