@@ -1,3 +1,8 @@
+![GitHub package.json version](https://img.shields.io/github/package-json/v/marcin-pajak/emails-input)
+![GitHub](https://img.shields.io/github/license/marcin-pajak/emails-input)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@marcin-pajak/emails-input)
+[![Coverage Status](https://coveralls.io/repos/github/marcin-pajak/emails-input/badge.svg?branch=master)](https://coveralls.io/github/marcin-pajak/emails-input?branch=master)
+
 # Emails-Input
 
 Dependency-less library for input, which supports adding and removing multiple
@@ -9,7 +14,7 @@ Provides email validation and public API. Allows pasting emails from clipboard
 (including multiple emails separated by comma), by pressing `enter` or `,`, or
 by losing focus from the input.
 
-Only 2.82KB when minified and gzipped. Works in all major browsers and IE11.
+Only 3.12KB when minified and gzipped. Works in all major browsers and IE11.
 
 Allows multiple inputs on the same page.
 
