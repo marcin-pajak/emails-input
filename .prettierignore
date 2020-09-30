@@ -5,3 +5,4 @@ coverage
 package.json
 package-lock.json
 /lib/*
+.github
