@@ -80,6 +80,7 @@
     "spellcheck": "cspell '**/*'",
     "test": "jest --coverage",
     "test:watch": "jest --watch --verbose false",
+    "test:ci": "jest --ci --maxWorkers=50% --coverage",
     "test:changed": "jest --changedSince=origin/master",
     "types": "tsc --outDir '/tmp/tsc-void' # https://github.com/Microsoft/TypeScript/issues/30661"
   },
