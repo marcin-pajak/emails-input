@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple EmailsInput instances example</title>
+    <meta name="Description" content="Example usage of multiple awesome EmailsInputs.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../lib/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        font-family: 'Open Sans', sans-serif;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .Dialog {
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        max-width: 650px;
+        width: 50vw;
+      }
+
+      .Dialog-content {
+        background: #f8f8f7;
+        padding: 8px 50px;
+      }
+
+      .Field {
+        margin: 24px 0;
+        max-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Dialog">
+      <div class="Dialog-content">
+        <div id="field1" class="Field"></div>
+        <div id="field2" class="Field"></div>
+      </div>
+    </div>
+
+    <script src="../../lib/index.umd.js"></script>
+    <script>
+      const Init = () => {
+        const field1 = document.querySelector('#field1');
+        const field2 = document.querySelector('#field2');
+        const instance1 = new EmailsInput(field1);
+        const instance2 = new EmailsInput(field2, {
+          initialValue: ['some@email.com', '<b>marcin@domain.com</b>'],
+          onChange: (a, b, c) => console.log(a, b, c),
+        });
+
+        window.instance1 = instance1;
+        window.instance2 = instance2;
+
+        document.removeEventListener('DOMContentLoaded', Init);
+      };
+
+      document.addEventListener('DOMContentLoaded', Init);
+    </script>
+  </body>
+</html>
