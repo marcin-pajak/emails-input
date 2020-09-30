@@ -1,0 +1,1 @@
+{"version":3,"file":"index.umd.js","sources":["../src/index.ts"],"sourcesContent":["const EmailsInput = (): void => {\n  // eslint-disable-next-line no-alert\n  alert('EmailsInput');\n};\n\nexport default EmailsInput;\n"],"names":[],"mappings":";;;;;;EAAA,IAAM,WAAW,GAAG;;MAElB,KAAK,CAAC,aAAa,CAAC,CAAC;EACvB,CAAC,CAAC;;;;;;;;"}

@@ -1,0 +1,87 @@
+{
+  "author": "Marcin Pajak <marcin@ridedott.com>",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "description": "Dependency-less EmailsInput library for input, which supports adding and removing multiple email addresses in an accessible way.",
+  "keywords": [
+    "typescript",
+    "forms",
+    "email"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@ridedott/eslint-config": "^2.2.29",
+    "@testing-library/dom": "^7.24.3",
+    "@testing-library/user-event": "^12.1.6",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^12.12.35",
+    "commitizen": "^4.2.1",
+    "cspell": "^4.1.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.9.0",
+    "husky": "^4.3.0",
+    "jest": "^25.5.4",
+    "lint-staged": "^10.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.1",
+    "rollup": "^0.67.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "ts-jest": "^25.5.1",
+    "ts-node": "^9.0.0"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run husky:pre-commit"
+    }
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.ts": [
+      "eslint"
+    ],
+    "*.{json,md,ts,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "name": "@marcin-pajak/emails-input",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.es5.js",
+  "types": "lib/index.d.ts",
+  "private": false,
+  "scripts": {
+    "build": "npm run clean && tsc --project tsconfig.production.json --module commonjs && rollup -c rollup.config.ts ",
+    "start": "rollup -c rollup.config.ts -w",
+    "clean": "rm -rf lib",
+    "cz": "git-cz",
+    "cz:retry": "git-cz --retry",
+    "format": "prettier --check '**/*.{js,json,md,ts,yml,yaml}'",
+    "format:fix": "prettier --write '**/*.{js,json,md,ts,yml,yaml}'",
+    "husky:lint-staged": "lint-staged",
+    "husky:pre-commit": "run-p spellcheck types husky:lint-staged -s test:changed",
+    "lint": "eslint --resolve-plugins-relative-to './node_modules/@ridedott/eslint-config' '**/*.ts'",
+    "lint:fix": "eslint --fix --resolve-plugins-relative-to './node_modules/@ridedott/eslint-config' '**/*.ts'",
+    "spellcheck": "cspell '**/*'",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --verbose false",
+    "test:changed": "jest --changedSince=origin/master",
+    "types": "tsc --outDir '/tmp/tsc-void' # https://github.com/Microsoft/TypeScript/issues/30661"
+  },
+  "version": "0.0.0"
+}

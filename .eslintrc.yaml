@@ -1,0 +1,16 @@
+env:
+  es6: true
+  node: true
+extends: '@ridedott/eslint-config'
+rules:
+  'immutable/no-mutation': 'off'
+  'immutable/no-this': 'off'
+  'unicorn/filename-case': 'off'
+  '@typescript-eslint/no-dynamic-delete': 'off'
+  'max-lines-per-function': 'off'
+  'new-cap': 'off'
+  'require-unicode-regexp': 'off'
+parserOptions:
+  ecmaVersion: 10
+  project: tsconfig.json
+  sourceType: module
