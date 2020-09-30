@@ -2,6 +2,7 @@
 ![GitHub](https://img.shields.io/github/license/marcin-pajak/emails-input)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@marcin-pajak/emails-input)
 [![Coverage Status](https://coveralls.io/repos/github/marcin-pajak/emails-input/badge.svg?branch=master)](https://coveralls.io/github/marcin-pajak/emails-input?branch=master)
+[![Continuous Delivery](https://github.com/marcin-pajak/emails-input/workflows/Continuous%20Integration/badge.svg)](https://github.com/marcin-pajak/emails-input/actions?query=workflow%3A%22Continuous+Integration%22)
 
 # Emails-Input
 
