@@ -88,7 +88,11 @@ EmailsInput takes two arguments:
 ```typescript
 interface Options {
   initialValue: string[];
-  onChange: (changed: string, type: ChangeType, newValue: string[]) => void;
+  onChange: (
+    changed: string,
+    actionType: ChangeType,
+    newValue: string[],
+  ) => void;
 }
 ```
 
@@ -97,7 +101,7 @@ interface Options {
 List of emails that should be rendered and put on the library's start upon
 initialization.
 
-### onChange: (changed: string, type: ChangeType, newValue: string[]) => void
+### onChange: (changed: string, actionType: ChangeType, newValue: string[]) => void
 
 `onChange` callback that will be called every time an email gets added or
 removed from the input.
@@ -149,18 +153,18 @@ property. The library inherits them in its styles.
   const element = document.querySelector('#emails-input');
   const instance = EmailsInput(element, {
     initialValue: ['some@email.com'],
-    onChange: (value, action, emails) => {
+    onChange: (value, actionType, emails) => {
       console.log('Changed: ', value);
-      console.log('Action type: ', action);
+      console.log('Action type: ', actionType);
       console.log('Input value: ', emails);
     },
   });
 
-  // Add email via method
+  // Add emails via api
   instance.add('other@email.com');
   instance.add('another@email.com, one-more@email.com');
 
-  // Remove email via method
+  // Remove email via api
   instance.removeByName('some@email.com');
 
   // Remove 'other@email.com' email via index
@@ -189,7 +193,7 @@ Have a look at the examples directory.
 
 See [Vanilla Example](./examples/vanilla-npm/dist/index.html)
 
-See [Multiple Instances](./examples/vanilla-multiple/index.html)
+See [Multiple Instances Example](./examples/vanilla-multiple/index.html)
 
 ## Public API
 
@@ -198,7 +202,7 @@ See [Multiple Instances](./examples/vanilla-multiple/index.html)
 #### onChange
 
 ```
-onChange: (changed: string, type: ChangeType, newValue: string[]) => void;
+onChange: (changed: string, actionType: ChangeType, newValue: string[]) => void;
 ```
 
 where `ChangeType` indicates action type:
@@ -300,6 +304,12 @@ multiple times, according to the number of emails added to the state.
 
 Removes email from the library's state based on its name in `emails` property.
 
+Triggers onChange callback as follows:
+
+```typescript
+onChange(removedEmail: string, ChangeType.Removed: ChangeType, state.emails: string[]);
+```
+
 ##### Error
 
 When called with invalid index, it throws `ERR_EMAIL_NOT_FOUND`.
@@ -307,6 +317,12 @@ When called with invalid index, it throws `ERR_EMAIL_NOT_FOUND`.
 #### `removeByIndex: (index: number) => void`
 
 Removes email from the library's state based on its index in `emails` property.
+
+Triggers onChange callback as follows:
+
+```typescript
+onChange(removedEmail: string, ChangeType.Removed: ChangeType, state.emails: string[]);
+```
 
 ##### Error
 
