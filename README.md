@@ -11,7 +11,8 @@ email addresses in an accessible way.
 
 ![Demo](emails-input.gif)
 
-Read this documentation on [GitHub Pages](https://marcin-pajak.github.io/emails-input/).
+Read this documentation on
+[GitHub Pages](https://marcin-pajak.github.io/emails-input/).
 
 Provides email validation and public API. Allows pasting emails from clipboard
 (including multiple emails separated by comma), by pressing `enter` or `,`, or
@@ -35,7 +36,7 @@ npm install @marcin-pajak/emails-input --save
 You can than import it in your project
 
 ```typescript
-import EmailsInput from '@marcin-pajak/emails-input'
+import EmailsInput from '@marcin-pajak/emails-input';
 ```
 
 You can also use the provided styles:
