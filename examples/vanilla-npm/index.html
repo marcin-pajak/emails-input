@@ -22,17 +22,29 @@
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
         max-width: 650px;
-        width: 50vw;
+        width: 95%;
       }
 
       .Dialog-content {
         background: #f8f8f7;
-        padding: 8px 50px;
+        padding: 8px 14px;
+      }
+
+      @media screen and (min-width: 30em) {
+        .Dialog-content {
+          padding: 8px 50px;
+        }
       }
 
       .Dialog-actions {
-        padding: 14px 42px;
+        padding: 14px;
         user-select: none;
+      }
+
+      @media screen and (min-width: 30em) {
+        .Dialog-actions {
+          padding: 14px 42px;
+        }
       }
 
       .Button {
