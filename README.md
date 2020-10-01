@@ -9,7 +9,9 @@
 Dependency-less library for input, which supports adding and removing multiple
 email addresses in an accessible way.
 
-![](emails-input.gif)
+![Demo](emails-input.gif)
+
+Read this documentation on [GitHub Pages](https://marcin-pajak.github.io/emails-input/).
 
 Provides email validation and public API. Allows pasting emails from clipboard
 (including multiple emails separated by comma), by pressing `enter` or `,`, or
@@ -32,13 +34,13 @@ npm install @marcin-pajak/emails-input --save
 
 You can than import it in your project
 
-```
+```typescript
 import EmailsInput from '@marcin-pajak/emails-input'
 ```
 
 You can also use the provided styles:
 
-```
+```typescript
 import '@marcin-pajak/emails-input/lib/styles.css';
 ```
 
@@ -309,7 +311,7 @@ Removes email from the library's state based on its index in `emails` property.
 
 When called with invalid index, it throws `ERR_EMAIL_NOT_FOUND`.
 
-## Improvements
+## Future improvements
 
 - Add public method to reset the state.
 - Initialize the library on an input element and update its value with current
